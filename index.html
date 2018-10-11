@@ -1,0 +1,212 @@
+<html>
+<script src="aframe/aframe.min.js"></script>
+<script src="aframe/aframe-ar.js"></script>
+<link rel="manifest" href="/manifest.json">
+ <script type="text/javascript" src="app.js"></script>
+
+<a-scene embeded arjs = 'trackingMethod: best;'>
+  
+  <a-anchor hit-testing-enabled='true'>
+  
+
+
+
+
+
+<a-entity light="type: ambient; color: #FFFFFF"></a-entity>
+<a-entity light="type: point; intensity: 1;color: #BABABA" position="0 0 0"></a-entity>
+
+
+<!-- <a-entity sound="src: nocturno.mp3; autoplay: true; volume: 0.05"></a-entity> -->
+
+<!-- PLANETAS -->
+<a-entity position="0 0 0" rotation="0 0 0">
+<a-image position="0 5 0" src="nombres/sol.png" scale="1.5 0.5 1.5"></a-image>
+<a-sphere position="0 0 0"  scale="2 2 2" src="img/sun.jpg">
+<a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="35000" repeat="indefinite" easing="linear"></a-animation></a-sphere>
+</a-entity>
+
+<!-- MERCURIO -->
+ 
+<a-entity position="0 0 0" rotation="0 0 0">
+<a-animation attribute="rotation" to="0 360 0" dur="40000" fill="forwards" easing="linear" repeat="indefinite"></a-animation>
+<a-image height="4" weight="4" position="0 5 6" scale="1.5 0.3 1.5" src="nombres/mercurio.png"></a-image> 
+<a-sphere position="0 0 6" scale="0.4 0.4 0.4" rotation="0 0 0" src="img/mercurio.jpg">
+<a-mouseenter scale="3 3 3" easing="linear"></a-mouseenter>
+<a-mouseleave scale="0.4 0.4 0.4"></a-mouseleave><a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="15000" easing="linear" repeat="indefinite" ></a-animation>
+</a-sphere>
+
+</a-entity>
+<!-- -->
+
+<!-- VENUS -->
+
+<a-entity position="0 0 0" rotation="0 0 0">
+<a-animation attribute="rotation" to="0 360 0" dur="45000" fill="forwards" easing="linear" repeat="indefinite"></a-animation>
+<a-image position="0 5 8.5" scale="1.5 0.3 1.5" src="nombres/venus.png"></a-image>
+<a-sphere position="0 0 8.5" scale="0.4 0.4 0.4" src="img/venus.jpg">
+<a-mouseenter scale="3 3 3"></a-mouseenter>
+<a-mouseleave scale="0.4 0.4 0.4"></a-mouseleave><a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="15000" repeat="indefinite" easing="linear"></a-animation></a-sphere>
+
+</a-entity>
+<!-- -->
+
+<!-- TIERRA -->
+
+<a-entity position="0 0 0" rotation="0 0 0">
+<a-animation attribute="rotation" to="0 360 0" dur="50000" fill="forwards" easing="linear" repeat="indefinite"></a-animation>
+<a-image position="0 5 10.5" scale="1.5 0.3 1.5" src="nombres/urano.png"></a-image>
+<a-sphere id="tierra" position="0 0 10.5"  scale="0.5 0.5 0.5" src="img/tierra.jpg">
+<a-mouseenter scale="3 3 3"></a-mouseenter>
+<a-mouseleave scale="0.5 0.5 0.5"></a-mouseleave><a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="15000" repeat="indefinite" ></a-animation></a-sphere>
+
+<!-- LUNA -->
+<a-entity position="0 0.3 10.5" rotation="0 0 0">
+<a-animation attribute="rotation" to="0 360 0" dur="25000" fill="forwards" easing="linear" repeat="indefinite"></a-animation>
+
+<a-sphere position="0 0.3 0.3"  scale="0.2 0.2 0.2" src="img/luna.jpg">
+</a-sphere>
+
+</a-entity>
+<!-- -->
+</a-entity>
+<!--  --> 
+
+<!-- MARTE -->
+<a-entity position="0 0 0" rotation="0 0 0">
+<a-animation attribute="rotation" to="0 360 0" dur="55000" fill="forwards" easing="linear" repeat="indefinite"></a-animation>
+<a-image position="0 5 12.5" scale="1.5 0.3 1.5" src="nombres/marte.png"></a-image>
+<a-sphere position="0 0 12.5" scale="0.4 0.4 0.4" src="img/marte.jpg">
+<a-mouseenter scale="3 3 3"></a-mouseenter>
+<a-mouseleave scale="0.4 0.4 0.4"></a-mouseleave><a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="15000" repeat="indefinite" easing="linear"></a-animation></a-sphere>
+</a-entity>
+<!-- -->
+
+<a-model src="asteroides.dae" scale="2.1 2.1 2.1" position="0 0 0"><a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="45000" repeat="indefinite" easing="linear"></a-animation></a-model>
+
+<!-- JUPITER -->
+<a-entity position="0 0 0" rotation="0 0 0">
+<a-animation attribute="rotation" to="0 360 0" dur="60000" fill="forwards" easing="linear" repeat="indefinite"></a-animation>
+<a-image position="0 5 24" scale="1.5 0.3 1.5" src="nombres/jupiter.png"></a-image>
+<a-sphere position="0 0 24"  scale="2.5 2.5 2.5" src="img/jupiter.jpg">
+<a-mouseenter scale="3.2 3.2 3.2"></a-mouseenter>
+<a-mouseleave scale="2.5 2.5 2.5"></a-mouseleave><a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="15000" repeat="indefinite" easing="linear"></a-animation></a-sphere>
+
+</a-entity>
+<!-- -->
+
+<!-- SATURNO -->
+<a-entity position="0 0 0" rotation="0 0 0">
+<a-animation attribute="rotation" to="0 360 0" dur="65000" fill="forwards" easing="linear" repeat="indefinite"></a-animation>
+<a-image position="0 5 31" scale="1.5 0.3 1.5" src="nombres/saturno.png"></a-image>
+<a-sphere position="0 0 31"  scale="1.8 1.8 1.8" src="img/saturno.png">
+<a-mouseenter scale="2.5 2.5 2.5"></a-mouseenter>
+<a-mouseleave scale="1.8 1.8 1.8"></a-mouseleave><a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="15000" repeat="indefinite" easing="linear"></a-animation></a-sphere>
+<a-entity geometry="primitive: torus; radius: 3.2; radiusTubular: 0.1;segmentsTubular: 50"
+          material="color: #57524A;" position="0 0 31" rotation="90 0 0" scale="1 1 0.1"></a-entity>
+<a-entity geometry="primitive: torus; radius: 2.4; radiusTubular: 0.2;segmentsTubular: 50"
+          material="color: #A29A87;" position="0 0 31" rotation="90 0 0" scale="1 1 0.1"></a-entity>
+</a-entity>
+<!-- -->          
+         
+<!-- URANO -->
+<a-entity position="0 0 0" rotation="0 0 0">
+<a-animation attribute="rotation" to="0 360 0" dur="70000" fill="forwards" easing="linear" repeat="indefinite"></a-animation>
+<a-image position="0 5 36" scale="1.5 0.3 1.5" src="nombres/urano.png"></a-image>
+<a-sphere position="0 0 36"  scale="1 1 1" rotation="0 0 0" src="img/urano.jpg">
+<a-mouseenter scale="3 3 3"></a-mouseenter>
+<a-mouseleave scale="1 1 1"></a-mouseleave><a-animation attribute="rotation" from="0 0 0" to="360 0 0" dur="15000" repeat="indefinite" easing="linear"></a-animation></a-sphere>
+<a-entity geometry="primitive: torus; radius: 1.5; radiusTubular: 0.01;segmentsTubular: 50"
+          material="color: #FFFFFF;" position="0 0 36" rotation="-10 90 0" scale="1 1 0.1"></a-entity>
+
+</a-entity>         
+<!-- -->          
+
+<!-- NEPTUNO -->
+<a-entity position="0 0 0" rotation="0 0 0">
+<a-animation attribute="rotation" to="0 360 0" dur="75000" fill="forwards" easing="linear" repeat="indefinite"></a-animation>
+<a-image position="0 5 40" scale="1.5 0.3 1.5" src="nombres/neptuno.png"></a-image>
+<a-sphere position="0 0 40"  scale="1 1 1" src="img/neptuno.jpg">
+<a-mouseenter scale="3 3 3"></a-mouseenter>
+<a-mouseleave scale="1 1 1"></a-mouseleave><a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="15000" repeat="indefinite" easing="linear"></a-animation></a-sphere>
+<a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.01;segmentsTubular: 50"
+          material="color: #FFFFFF;opacity: 0.8" position="0 0 40" rotation="90 0 0" scale="1 1 0.1"></a-entity>
+<a-entity geometry="primitive: torus; radius: 1.7; radiusTubular: 0.05;segmentsTubular: 50"
+          material="color: #FFFFFF;opacity: 0.8" position="0 0 40" rotation="90 0 0" scale="1 1 0.1"></a-entity>
+<a-entity geometry="primitive: torus; radius: 1.3; radiusTubular: 0.01;segmentsTubular: 50"
+          material="color: #FFFFFF;opacity: 0.8" position="0 0 40" rotation="90 0 0" scale="1 1 0.1"></a-entity>          
+          
+</a-entity>
+<!--  -->
+
+
+<!-- PLUTON -->
+<a-entity position="0 0 0" rotation="0 0 0">
+<a-animation attribute="rotation" to="0 360 0" dur="80000" fill="forwards" easing="linear" repeat="indefinite"></a-animation>
+<a-image position="0 5 46" scale="1.5 0.3 1.5" src="nombres/pluton.png"></a-image>
+<a-sphere position="0 0 46" scale="0.4 0.4 0.4" src="img/pluton.jpg"><a-mouseenter scale="3 3 3"></a-mouseenter>
+<a-mouseleave scale="0.4 0.4 0.4"></a-mouseleave><a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="15000" repeat="indefinite" easing="linear"></a-animation></a-sphere>
+
+</a-entity>
+<!--  -->
+
+<!-- FIN PLANETAS -->
+<!-- ORBITAS -->
+
+<a-entity geometry="primitive: torus; radius: 3; radiusTubular: 0.01;segmentsTubular: 50"
+          material="color: #FFFFFF;opacity: 0.3" position="0 0 0" rotation="90 0 0" scale="2 2 0.1"></a-entity>
+          
+<a-entity geometry="primitive: torus; radius: 4.24; radiusTubular: 0.01;segmentsTubular: 50"
+          material="color: #FFFFFF;opacity: 0.3" position="0 0 0" rotation="90 0 0" scale="2 2 0.1"></a-entity>
+<a-entity geometry="primitive: torus; radius: 5.24; radiusTubular: 0.01;segmentsTubular: 50"
+          material="color: #FFFFFF;opacity: 0.3" position="0 0 0" rotation="90 0 0" scale="2 2 0.1"></a-entity>
+<a-entity geometry="primitive: torus; radius: 6.25; radiusTubular: 0.01;segmentsTubular: 50"
+          material="color: #FFFFFF;opacity: 0.3" position="0 0 0" rotation="90 0 0" scale="2 2 0.1"></a-entity>
+<a-entity geometry="primitive: torus; radius: 12.1; radiusTubular: 0.01;segmentsTubular: 50"
+          material="color: #FFFFFF;opacity: 0.3" position="0 0 0" rotation="90 0 0" scale="2 2 0.1"></a-entity>
+<a-entity geometry="primitive: torus; radius: 15.55; radiusTubular: 0.01;segmentsTubular: 50"
+          material="color: #FFFFFF;opacity: 0.3" position="0 0 0" rotation="90 0 0" scale="2 2 0.1"></a-entity>
+<a-entity geometry="primitive: torus; radius: 18.05; radiusTubular: 0.01;segmentsTubular: 50"
+          material="color: #FFFFFF;opacity: 0.3" position="0 0 0" rotation="90 0 0" scale="2 2 0.1"></a-entity> 
+<a-entity geometry="primitive: torus; radius: 20.05; radiusTubular: 0.01;segmentsTubular: 50"
+          material="color: #FFFFFF;opacity: 0.3" position="0 0 0" rotation="90 0 0" scale="2 2 0.1"></a-entity>                    
+<a-entity geometry="primitive: torus; radius: 23.05; radiusTubular: 0.01;segmentsTubular: 50"
+          material="color: #FFFFFF;opacity: 0.3" position="0 0 0" rotation="90 0 0" scale="2 2 0.1"></a-entity>             
+
+<a-entity id="camera" camera position="-15 5 20" look-controls="enabled: true" rotation="0 0 0" cursor-visible="enabled: true" wasd-controls="enabled: true">
+   <a-entity id="cursor" cursor="fuse: true;  maxDistance: 100; timeout: 200" geometry="primitive: ring; radiusInner: 0.005; radiusOuter: 0.01" material="color: aquamarine" position="0 0 -0.69" raycaster=""></a-entity>
+   
+<a-animation attribute="position" begin="lugar" to="0 0 0" easing="linear" dur="5000"></a-animation>    
+<a-animation attribute="position" begin="lugar0" to="-8 1 5" easing="linear" dur="5000"></a-animation>  
+    <a-animation attribute="position" begin="lugar1" to="-12 1 9" easing="linear" dur="5000"></a-animation> 
+   
+   <a-animation attribute="position" begin="lugar2" to="-20 1 15" easing="linear" dur="5000"></a-animation>   
+   <a-animation attribute="position" begin="lugar3" to="-27 1 20" easing="linear" dur="5000"></a-animation> 
+   <a-animation attribute="position" begin="lugar4" to="-39 1 27" easing="linear" dur="5000"></a-animation> 
+
+  </a-entity>
+
+
+
+
+
+
+
+  </a-anchor>
+  <a-camera-static/>
+
+  </a-scene>
+
+
+
+
+
+   
+    
+     
+  
+  
+
+ 
+
+</html>
